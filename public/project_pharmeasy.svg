@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Clean Warm White Background -->
+  <rect width="800" height="450" fill="#f8fafc"/>
+
+  <!-- Centered Brand Card matching uploaded image -->
+  <g transform="translate(160, 45)" filter="url(#cardShadow)">
+    <rect width="480" height="360" rx="36" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+
+    <!-- PharmEasy Icon -->
+    <g transform="translate(240, 140)">
+      <!-- Pill flask / smiling hook icon -->
+      <path d="M 0,-70 C 42,-70 72,-38 72,5 L 72,42 C 72,75 42,92 0,92 C -42,92 -72,75 -72,42 L -72,5 C -72,-38 -42,-70 0,-70 Z" fill="none" stroke="#10847e" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -72,12 L 72,12" stroke="#10847e" stroke-width="24" stroke-linecap="round"/>
+      <circle cx="0" cy="52" r="12" fill="#10847e"/>
+    </g>
+
+    <!-- PharmEasy Wordmark -->
+    <text x="240" y="295" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="800" font-size="56" fill="#10847e" text-anchor="middle" letter-spacing="-1.5">PharmEasy</text>
+  </g>
+</svg>

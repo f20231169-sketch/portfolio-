@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350">
+  <rect width="800" height="350" fill="#faf7f2"/>
+  <g transform="translate(400, 200)">
+    <text x="0" y="0" font-family="Georgia, serif" font-style="normal" font-weight="700" font-size="120" fill="#000000" text-anchor="middle" letter-spacing="-2">Instagram</text>
+  </g>
+</svg>

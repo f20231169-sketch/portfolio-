@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#b45309" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#1c1917" stop-opacity="0.95"/>
+    </radialGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fcd34d"/>
+      <stop offset="60%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#451a03"/>
+      <stop offset="50%" stop-color="#291003"/>
+      <stop offset="100%" stop-color="#1a0b02"/>
+    </linearGradient>
+    <clipPath id="circleClip">
+      <circle cx="300" cy="300" r="280" />
+    </clipPath>
+  </defs>
+  
+  <g clip-path="url(#circleClip)">
+    <!-- Background wall warm daylight -->
+    <rect width="600" height="600" fill="url(#bgGrad)" />
+    
+    <!-- Shoulders and dark top -->
+    <path d="M120 540 Q180 430 300 430 Q420 430 480 540 L520 600 L80 600 Z" fill="#18181b" />
+    <path d="M220 440 Q300 480 380 440 Q300 500 220 440 Z" fill="#27272a" />
+    
+    <!-- Hair back -->
+    <path d="M180 200 C150 280 140 380 180 460 C230 460 260 430 250 360 C240 300 240 240 260 200 Z" fill="url(#hairGrad)" />
+    <path d="M420 200 C450 280 460 380 420 460 C370 460 340 430 350 360 C360 300 360 240 340 200 Z" fill="url(#hairGrad)" />
+    
+    <!-- Neck -->
+    <rect x="260" y="340" width="80" height="110" rx="20" fill="url(#skinGrad)" />
+    <path d="M260 410 Q300 430 340 410 L340 430 L260 430 Z" fill="#b45309" opacity="0.4" />
+    
+    <!-- Head / Face -->
+    <ellipse cx="300" cy="275" rx="100" ry="125" fill="url(#skinGrad)" />
+    
+    <!-- Chin / jaw contour -->
+    <path d="M210 270 Q210 370 300 385 Q390 370 390 270" fill="none" stroke="#d97706" stroke-width="2" opacity="0.3" />
+    
+    <!-- Hair front and bangs -->
+    <path d="M200 240 C190 140 260 110 300 110 C360 110 410 140 400 240 C380 170 340 150 300 160 C250 150 220 180 200 240 Z" fill="url(#hairGrad)" />
+    <path d="M190 230 C180 290 170 370 205 440 C215 390 225 320 220 260 Z" fill="url(#hairGrad)" />
+    <path d="M410 230 C420 290 430 370 395 440 C385 390 375 320 380 260 Z" fill="url(#hairGrad)" />
+    
+    <!-- Soft warm cheek blush -->
+    <ellipse cx="240" cy="300" rx="28" ry="18" fill="#ef4444" opacity="0.15" />
+    <ellipse cx="360" cy="300" rx="28" ry="18" fill="#ef4444" opacity="0.15" />
+
+    <!-- Eyebrows -->
+    <path d="M230 225 Q255 215 275 225" stroke="#291003" stroke-width="5" stroke-linecap="round" fill="none" />
+    <path d="M325 225 Q345 215 370 225" stroke="#291003" stroke-width="5" stroke-linecap="round" fill="none" />
+    
+    <!-- Bindi (signature detail) -->
+    <circle cx="300" cy="232" r="4.5" fill="#18181b" />
+    
+    <!-- Eyes -->
+    <ellipse cx="255" cy="248" rx="14" ry="9" fill="#ffffff" />
+    <ellipse cx="345" cy="248" rx="14" ry="9" fill="#ffffff" />
+    <circle cx="255" cy="248" r="7" fill="#291003" />
+    <circle cx="345" cy="248" r="7" fill="#291003" />
+    <circle cx="253" cy="246" r="2.5" fill="#ffffff" />
+    <circle cx="343" cy="246" r="2.5" fill="#ffffff" />
+    
+    <!-- Glasses (Hexagonal rounded thin black wireframe as in photo) -->
+    <!-- Left lens -->
+    <polygon points="220,240 240,228 275,230 285,252 270,270 235,270 220,255" fill="rgba(255,255,255,0.12)" stroke="#18181b" stroke-width="4.5" stroke-linejoin="round" />
+    <!-- Right lens -->
+    <polygon points="315,252 325,230 360,228 380,240 380,255 365,270 330,270" fill="rgba(255,255,255,0.12)" stroke="#18181b" stroke-width="4.5" stroke-linejoin="round" />
+    <!-- Glasses Bridge -->
+    <path d="M285 242 Q300 238 315 242" stroke="#18181b" stroke-width="4" fill="none" />
+    <!-- Glasses temples -->
+    <path d="M220 242 L200 246" stroke="#18181b" stroke-width="3.5" fill="none" />
+    <path d="M380 242 L400 246" stroke="#18181b" stroke-width="3.5" fill="none" />
+    
+    <!-- Nose -->
+    <path d="M296 250 L295 285 Q300 292 305 285" stroke="#b45309" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6" />
+    <path d="M288 288 Q300 294 312 288" stroke="#b45309" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6" />
+
+    <!-- Gentle warm confident smile -->
+    <path d="M272 320 Q300 342 328 320" stroke="#991b1b" stroke-width="4" stroke-linecap="round" fill="none" />
+    <path d="M276 321 Q300 334 324 321" fill="#fca5a5" opacity="0.8" />
+  </g>
+  <!-- Outer border ring -->
+  <circle cx="300" cy="300" r="278" fill="none" stroke="#7c3aed" stroke-width="3" opacity="0.6" />
+</svg>

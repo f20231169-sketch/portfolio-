@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#ffffff"/>
+  <!-- Decorative corner circles -->
+  <circle cx="50" cy="50" r="28" fill="#ffe4e6" opacity="0.8"/>
+  <circle cx="750" cy="400" r="32" fill="#dcfce7" opacity="0.8"/>
+  
+  <g transform="translate(400, 225)">
+    <!-- Maternal Care Badge -->
+    <rect x="-140" y="-140" width="280" height="42" rx="21" fill="#fff1f2" stroke="#fecdd3" stroke-width="1.5"/>
+    <text x="0" y="-113" font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="16" fill="#f43f5e" text-anchor="middle" letter-spacing="4">MATERNAL CARE</text>
+    
+    <!-- Janani title -->
+    <text x="0" y="-20" font-family="Georgia, serif" font-weight="900" font-size="96" fill="#1c1917" text-anchor="middle">Janani</text>
+    
+    <!-- Smile swoop -->
+    <path d="M-150 15 Q0 55 150 15" fill="none" stroke="#fb7185" stroke-width="6" stroke-linecap="round"/>
+    
+    <!-- CARE -->
+    <text x="0" y="80" font-family="Arial, Helvetica, sans-serif" font-weight="500" font-size="28" fill="#44403c" text-anchor="middle" letter-spacing="12">C A R E</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="140" font-family="Arial, Helvetica, sans-serif" font-weight="500" font-size="18" fill="#57534e" text-anchor="middle">Empathetic Clinical &amp; Restorative Pregnancy Companion</text>
+  </g>
+</svg>

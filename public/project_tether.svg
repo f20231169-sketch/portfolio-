@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="tetherGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#faf5ee" stop-opacity="1"/>
+    </radialGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#18181b" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="450" fill="url(#tetherGlow)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04">
+    <line x1="0" y1="90" x2="800" y2="90" stroke="#000" stroke-width="1"/>
+    <line x1="0" y1="180" x2="800" y2="180" stroke="#000" stroke-width="1"/>
+    <line x1="0" y1="270" x2="800" y2="270" stroke="#000" stroke-width="1"/>
+    <line x1="0" y1="360" x2="800" y2="360" stroke="#000" stroke-width="1"/>
+    <line x1="160" y1="0" x2="160" y2="450" stroke="#000" stroke-width="1"/>
+    <line x1="320" y1="0" x2="320" y2="450" stroke="#000" stroke-width="1"/>
+    <line x1="480" y1="0" x2="480" y2="450" stroke="#000" stroke-width="1"/>
+    <line x1="640" y1="0" x2="640" y2="450" stroke="#000" stroke-width="1"/>
+  </g>
+
+  <!-- Main Wordmark Composition -->
+  <g transform="translate(400, 225)" text-anchor="middle" filter="url(#softShadow)">
+    <!-- TETHER with coral dot -->
+    <g transform="translate(-16, -10)">
+      <text x="0" y="20" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="900" font-size="110" fill="#111827" letter-spacing="-3">TETHER</text>
+      <!-- Coral/Peach Brand Dot at bottom-right of R -->
+      <circle cx="236" cy="10" r="13" fill="#f27059"/>
+    </g>
+
+    <!-- Subtitle: VOICE OF CUSTOMER INTELLIGENCE -->
+    <text x="0" y="80" font-family="'JetBrains Mono', monospace, sans-serif" font-weight="600" font-size="16" fill="#64748b" letter-spacing="9">VOICE OF CUSTOMER INTELLIGENCE</text>
+  </g>
+</svg>

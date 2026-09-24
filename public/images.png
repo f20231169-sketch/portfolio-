@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <rect width="600" height="600" rx="60" fill="#ffffff"/>
+  <g transform="translate(150, 120)">
+    <!-- Pill hook icon -->
+    <path d="M150 40 C190 40 220 70 220 110 L220 170 C220 200 200 220 170 220 L120 220 C90 220 70 200 70 170 C70 140 90 120 120 120 L160 120 L160 100 C160 80 145 65 125 65 C105 65 90 80 90 100" fill="none" stroke="#008659" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="120" y1="170" x2="160" y2="170" stroke="#008659" stroke-width="32" stroke-linecap="round"/>
+  </g>
+  <text x="300" y="440" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="90" fill="#008659" text-anchor="middle" letter-spacing="-1">PharmEasy</text>
+</svg>
