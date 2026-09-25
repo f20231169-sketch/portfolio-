@@ -84,6 +84,39 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
             </div>
           </div>
 
+          {/* 01 // Problem & 02 // Core Insight Cards - Placed directly after Hero, out from any prototype or deck box */}
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <div className="p-6 sm:p-8 rounded-2xl bg-white/[0.02] border border-white/10 shadow-lg">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="w-2.5 h-2.5 rounded-full bg-red-400" />
+                <span className="text-xs font-mono font-bold text-zinc-400 uppercase tracking-widest">
+                  01 // THE PROBLEM
+                </span>
+              </div>
+              <h4 className="text-lg font-bold font-display text-white mb-2">
+                Operational &amp; User Friction
+              </h4>
+              <p className="text-sm text-zinc-300 leading-relaxed">
+                {caseStudy.problemStatement}
+              </p>
+            </div>
+
+            <div className="p-6 sm:p-8 rounded-2xl bg-white/[0.02] border border-white/10 shadow-lg">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+                <span className="text-xs font-mono font-bold text-zinc-400 uppercase tracking-widest">
+                  02 // CORE USER INSIGHT
+                </span>
+              </div>
+              <h4 className="text-lg font-bold font-display text-white mb-2">
+                The Behavioral Reality
+              </h4>
+              <p className="text-sm text-zinc-300 leading-relaxed">
+                {caseStudy.insight}
+              </p>
+            </div>
+          </div>
+
           {/* PROJECT 01 EMBED: Live Working Website Embed for Tether VoC */}
           {project.id === 'tether-voc' && (
             <div className="mt-10">
@@ -172,39 +205,6 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
 
           {/* Case Study Structured Flow */}
           <div className="mt-12 space-y-8">
-            
-            {/* 01 // Problem & 02 // Core Insight Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-              <div className="p-6 sm:p-8 rounded-2xl bg-white/[0.02] border border-white/10 shadow-lg">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="w-2.5 h-2.5 rounded-full bg-red-400" />
-                  <span className="text-xs font-mono font-bold text-zinc-400 uppercase tracking-widest">
-                    01 // THE PROBLEM
-                  </span>
-                </div>
-                <h4 className="text-lg font-bold font-display text-white mb-2">
-                  Operational &amp; User Friction
-                </h4>
-                <p className="text-sm text-zinc-300 leading-relaxed">
-                  {caseStudy.problemStatement}
-                </p>
-              </div>
-
-              <div className="p-6 sm:p-8 rounded-2xl bg-white/[0.02] border border-white/10 shadow-lg">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
-                  <span className="text-xs font-mono font-bold text-zinc-400 uppercase tracking-widest">
-                    02 // CORE USER INSIGHT
-                  </span>
-                </div>
-                <h4 className="text-lg font-bold font-display text-white mb-2">
-                  The Behavioral Reality
-                </h4>
-                <p className="text-sm text-zinc-300 leading-relaxed">
-                  {caseStudy.insight}
-                </p>
-              </div>
-            </div>
 
             {/* 03 // STRATEGIC APPROACH: Dedicated Frame Box separating it completely from 01 & 02 */}
             <div className="p-6 sm:p-8 rounded-2xl bg-white/[0.03] border border-white/10 shadow-xl">

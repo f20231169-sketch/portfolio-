@@ -234,7 +234,7 @@ export const Projects: React.FC = () => {
                       {activeProject.id === 'janani-care' && (
                         <div className="absolute top-6 right-6 z-20">
                           <a
-                            href="https://ais-dev-jj6aaktchnle3zplhnqa7d-673820086794.asia-southeast1.run.app/"
+                            href="https://jananicare.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-pink-600 hover:bg-pink-500 text-white text-xs font-mono font-bold tracking-wide transition-all shadow-lg shadow-pink-600/30 hover:scale-105 active:scale-95 cursor-pointer backdrop-blur-md"
@@ -343,7 +343,7 @@ export const Projects: React.FC = () => {
                       {/* If Janani Care, add direct interactive mobile prototype CTA button */}
                       {activeProject.id === 'janani-care' && (
                         <a
-                          href="https://ais-dev-jj6aaktchnle3zplhnqa7d-673820086794.asia-southeast1.run.app/"
+                          href="https://jananicare.vercel.app/"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="w-full mb-3 inline-flex items-center justify-center gap-2 py-3 px-6 rounded-2xl bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-500 hover:to-rose-500 text-white font-bold text-xs sm:text-sm tracking-wider uppercase transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-pink-600/30 cursor-pointer"
@@ -473,7 +473,7 @@ export const Projects: React.FC = () => {
                           </div>
                         </div>
                         <a
-                          href="https://ais-dev-jj6aaktchnle3zplhnqa7d-673820086794.asia-southeast1.run.app/"
+                          href="https://jananicare.vercel.app/"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-mono text-xs font-bold transition-all shadow-md shadow-pink-600/30 hover:scale-105 active:scale-95 cursor-pointer"

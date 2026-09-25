@@ -8,7 +8,7 @@ interface JananiPrototypeEmbedProps {
 export const JananiPrototypeEmbed: React.FC<JananiPrototypeEmbedProps> = ({
   className = '',
 }) => {
-  const prototypeUrl = 'https://ais-dev-jj6aaktchnle3zplhnqa7d-673820086794.asia-southeast1.run.app/';
+  const prototypeUrl = 'https://jananicare.vercel.app/';
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
