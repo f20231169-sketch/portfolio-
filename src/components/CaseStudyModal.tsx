@@ -4,6 +4,7 @@ import { X, ArrowRight, CheckCircle, ShieldCheck, BarChart2, Layers } from 'luci
 import { Project } from '../types/portfolio';
 import { LiveWebsiteEmbed } from './LiveWebsiteEmbed';
 import { DeckViewer } from './DeckViewer';
+import { JananiPrototypeEmbed } from './JananiPrototypeEmbed';
 import { PHARMEASY_SLIDES, INSTAGRAM_SLIDES, QCOMMERCE_PILANI_SLIDES } from '../data/deckData';
 
 interface CaseStudyModalProps {
@@ -134,6 +135,19 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
                 accentColor="#ea580c"
                 pdfDownloadName="Pilani_QCommerce_Market_Research_Study.pdf"
               />
+            </div>
+          )}
+
+          {/* PROJECT 04: Janani Care Interactive Mobile Prototype */}
+          {project.id === 'janani-care' && (
+            <div className="mt-10">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="w-2 h-2 rounded-full bg-pink-400 animate-pulse" />
+                <span className="text-xs font-mono font-bold text-pink-400 uppercase tracking-widest">
+                  INTERACTIVE MOBILE PROTOTYPE // LIVE APP NAVIGATION
+                </span>
+              </div>
+              <JananiPrototypeEmbed />
             </div>
           )}
 

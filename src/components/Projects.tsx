@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ArrowUpRight, Check, Eye, LayoutGrid, Layers, Sparkles } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowUpRight, Check, Eye, LayoutGrid, Layers, Sparkles, Smartphone, ExternalLink } from 'lucide-react';
 import { Project } from '../types/portfolio';
 import { PROJECTS } from '../data/portfolioData';
 import { CaseStudyModal } from './CaseStudyModal';
@@ -213,33 +213,48 @@ export const Projects: React.FC = () => {
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
                     
-                    {/* Left Column: Visual Showcase with Hover Zoom */}
-                    <div className="lg:col-span-7 relative min-h-[340px] sm:min-h-[440px] lg:min-h-full overflow-hidden bg-[#0d0e13] flex items-center justify-center p-6 sm:p-10 group">
+                    {/* Left Column: Visual Showcase */}
+                    <div className="lg:col-span-7 relative min-h-[460px] lg:min-h-full overflow-hidden bg-[#0d0e13] flex flex-col items-center justify-center p-4 sm:p-8 group">
                       {/* Radial ambient spotlight */}
-                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.14),transparent_70%)] pointer-events-none" />
-                      
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(236,72,153,0.12),transparent_70%)] pointer-events-none" />
+
                       <img
                         src={activeProject.image}
                         alt={activeProject.title}
-                        className="w-full h-auto max-h-[360px] object-contain object-center group-hover:scale-105 transition-transform duration-700 ease-out rounded-xl drop-shadow-2xl"
+                        className="w-full h-auto max-h-[380px] object-contain object-center group-hover:scale-105 transition-transform duration-700 ease-out rounded-xl drop-shadow-2xl relative z-10"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0b0e] via-transparent to-transparent opacity-80 lg:hidden pointer-events-none" />
-                      
+
                       {/* Floating Preview Overlay Badge */}
-                      <div className="absolute top-6 left-6 px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md border border-white/20 text-[11px] font-mono tracking-widest text-zinc-200 uppercase flex items-center gap-2">
+                      <div className="absolute top-6 left-6 px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md border border-white/20 text-[11px] font-mono tracking-widest text-zinc-200 uppercase flex items-center gap-2 z-20">
                         <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                         <span>{activeProject.industry}</span>
                       </div>
 
+                      {/* For Janani Care: Direct Navigation to Open Mobile Prototype in New Tab */}
+                      {activeProject.id === 'janani-care' && (
+                        <div className="absolute top-6 right-6 z-20">
+                          <a
+                            href="https://ais-dev-jj6aaktchnle3zplhnqa7d-673820086794.asia-southeast1.run.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-pink-600 hover:bg-pink-500 text-white text-xs font-mono font-bold tracking-wide transition-all shadow-lg shadow-pink-600/30 hover:scale-105 active:scale-95 cursor-pointer backdrop-blur-md"
+                          >
+                            <Smartphone className="w-3.5 h-3.5" />
+                            <span>Prototype in new tab</span>
+                            <ExternalLink className="w-3 h-3" />
+                          </a>
+                        </div>
+                      )}
+
                       {/* Quick Case Study Button Overlay */}
-                      <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between pointer-events-none">
+                      <div className="w-full mt-4 flex items-center justify-between z-20 pt-2 border-t border-white/5">
                         <span className="text-xs font-mono text-white/70 bg-black/60 px-3 py-1.5 rounded-lg backdrop-blur-md">
-                          PROJECT {activeProject.number} OF 04
+                          PROJECT {activeProject.number} OF 0{PROJECTS.length}
                         </span>
                         <button
                           onClick={() => setSelectedCaseStudy(activeProject)}
                           data-cursor="pointer"
-                          className="pointer-events-auto inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white text-black text-xs font-bold tracking-wider hover:bg-zinc-200 transition-colors uppercase cursor-pointer shadow-xl"
+                          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white text-black text-xs font-bold tracking-wider hover:bg-zinc-200 transition-colors uppercase cursor-pointer shadow-xl"
                         >
                           <Eye className="w-3.5 h-3.5" />
                           <span>PREVIEW CASE</span>
@@ -315,14 +330,29 @@ export const Projects: React.FC = () => {
                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                             {activeProject.id === 'tether-voc' && 'Interactive Live Website Embed Included'}
                             {activeProject.id === 'pharmeasy-teardown' && 'Complete 8-Slide Growth Deck Embedded'}
-                            {activeProject.id === 'janani-care' && 'Interactive Clinical Framework & PRD Included'}
+                            {activeProject.id === 'qcommerce-pilani-study' && 'Complete 19-Slide SPSS Research Deck Embedded'}
+                            {activeProject.id === 'janani-care' && 'Interactive Live Mobile Prototype (Opens in New Tab)'}
                             {activeProject.id === 'instagram-campaign-world' && 'Complete 12-Slide Strategy Deck Embedded'}
                           </span>
                           <span className="text-[10px] font-mono text-zinc-400 uppercase hidden sm:inline">
-                            EXPANDABLE
+                            {activeProject.id === 'janani-care' ? 'NEW TAB' : 'EXPANDABLE'}
                           </span>
                         </div>
                       </div>
+
+                      {/* If Janani Care, add direct interactive mobile prototype CTA button */}
+                      {activeProject.id === 'janani-care' && (
+                        <a
+                          href="https://ais-dev-jj6aaktchnle3zplhnqa7d-673820086794.asia-southeast1.run.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full mb-3 inline-flex items-center justify-center gap-2 py-3 px-6 rounded-2xl bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-500 hover:to-rose-500 text-white font-bold text-xs sm:text-sm tracking-wider uppercase transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-pink-600/30 cursor-pointer"
+                        >
+                          <Smartphone className="w-4 h-4" />
+                          <span>OPEN MOBILE PROTOTYPE IN NEW TAB</span>
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      )}
 
                       {/* Primary CTA: View Case Study Modal */}
                       <button
@@ -390,8 +420,11 @@ export const Projects: React.FC = () => {
                     alt={project.title}
                     className="w-full h-full max-h-[220px] object-contain object-center group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-xl"
                   />
-                  <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono tracking-widest text-zinc-300 uppercase">
-                    {project.industry}
+                  <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono tracking-widest text-zinc-300 uppercase flex items-center gap-1.5">
+                    {project.id === 'janani-care' && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-pink-400 animate-pulse" />
+                    )}
+                    <span>{project.id === 'janani-care' ? 'INTERACTIVE APP • ' + project.industry : project.industry}</span>
                   </div>
                   <div className="absolute top-4 right-4 text-2xl font-mono font-black text-violet-400">
                     {project.number}
@@ -422,6 +455,34 @@ export const Projects: React.FC = () => {
                         </span>
                       ))}
                     </div>
+
+                    {/* For Janani Care: Interactive Mobile Prototype Open in New Tab */}
+                    {project.id === 'janani-care' && (
+                      <div className="mb-6 p-3.5 rounded-2xl bg-pink-950/25 border border-pink-500/30 flex items-center justify-between gap-3">
+                        <div className="flex items-center gap-2.5 min-w-0">
+                          <div className="w-8 h-8 rounded-lg bg-pink-500/20 border border-pink-500/30 flex items-center justify-center shrink-0">
+                            <Smartphone className="w-4 h-4 text-pink-400" />
+                          </div>
+                          <div className="min-w-0">
+                            <span className="text-xs font-mono font-bold text-pink-300 block truncate">
+                              INTERACTIVE MOBILE PROTOTYPE
+                            </span>
+                            <span className="text-[10px] font-mono text-zinc-400 block truncate">
+                              AI Voice Triage &amp; Trimester Tracking
+                            </span>
+                          </div>
+                        </div>
+                        <a
+                          href="https://ais-dev-jj6aaktchnle3zplhnqa7d-673820086794.asia-southeast1.run.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-mono text-xs font-bold transition-all shadow-md shadow-pink-600/30 hover:scale-105 active:scale-95 cursor-pointer"
+                        >
+                          <span>Open in new tab</span>
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      </div>
+                    )}
                   </div>
 
                   {/* Actions */}
